@@ -24,8 +24,8 @@ build:
   number: 0
   script: python -m pip install . -vv
   python_version_independent: true
-  entry_points."franklin.plugins":
-    - franklin = "franklin_container.magic:load_ipython_extension"
+  # entry_points."franklin.plugins":
+  #   - franklin = "franklin_container.magic:load_ipython_extension"
 requirements:
   host:
     - python
