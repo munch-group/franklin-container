@@ -14,6 +14,7 @@ authors = [
 dependencies = [
     "jupyterlab>=4",
     "ipython",
+    "pyperclip"
 ]
 requires-python = ">=3.9"
 
@@ -24,4 +25,4 @@ Homepage = "https://github.com/yourusername/franklin_container"
 where = ["src/franklin_container"]
 
 [project.entry-points."ipython_magic"]
-franklin_add = "franklin_container.magic:load_ipython_extension"
+franklin = "franklin_container.magic:load_ipython_extension"
