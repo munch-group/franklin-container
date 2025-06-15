@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "franklin_container"
-version = "0.1.0"
+version = "0.1.1"
 description = "A custom Jupyter magic for installing Pixi packages"
 readme = "README.md"
 license = "MIT"

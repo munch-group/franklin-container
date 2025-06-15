@@ -20,7 +20,7 @@ if sum([major, minor, patch]) != 1:
 
 # file, regex pairs
 spec = {
-    'pyproject.toml':  r"(version = ')(\d+)\.(\d+)\.(\d+)(')",
+    'pyproject.toml':  r'(version = ")(\d+)\.(\d+)\.(\d+)(")',
 }
 
 def bump(content, m):
