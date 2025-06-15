@@ -1,0 +1,5 @@
+# Sphinx inventory version 2
+# Project: franklin_container
+# Version: 0.0.9999
+# The remainder of this file is compressed using zlib.
+franklin_container.magic.load_ipython_extension py:function 1 api/load_ipython_extension.html#franklin_container.magic.load_ipython_extension -

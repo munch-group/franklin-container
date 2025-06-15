@@ -1,0 +1,7 @@
+# load_ipython_extension { #franklin_container.magic.load_ipython_extension }
+
+```python
+franklin_container.magic.load_ipython_extension(ipython)
+```
+
+This function is called when `%load_ext franklin_container` is run in IPython.

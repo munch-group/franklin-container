@@ -1,0 +1,10 @@
+# Function reference {.doc .doc-index}
+
+## Magic
+
+Some description...
+
+
+| | |
+| --- | --- |
+| [load_ipython_extension](load_ipython_extension.qmd#franklin_container.magic.load_ipython_extension) | This function is called when `%load_ext franklin_container` is run in IPython. |

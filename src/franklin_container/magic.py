@@ -2,9 +2,9 @@ from IPython.core.magic import register_line_magic
 import subprocess
 
 def load_ipython_extension(ipython):
-    """This function is called when `%load_ext franklin_magic` is run in IPython."""
+    """This function is called when `%load_ext franklin_container` is run in IPython."""
     @register_line_magic
-    def pixi_install(line):
+    def franklin_add(line):
         package = line.strip()
         if not package:
             print("Usage: %pixi_install <package-name>")

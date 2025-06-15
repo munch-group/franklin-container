@@ -1,0 +1,9 @@
+website:
+  sidebar:
+  - contents:
+    - api/index.qmd
+    - contents:
+      - api/load_ipython_extension.qmd
+      section: Magic
+    id: api
+  - id: dummy-sidebar

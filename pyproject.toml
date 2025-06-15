@@ -3,22 +3,25 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "franklin_magic"
+name = "franklin_container"
 version = "0.1.0"
 description = "A custom Jupyter magic for installing Pixi packages"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Your Name", email = "you@example.com"}
 ]
-dependencies = []
-requires-python = ">=3.7"
+dependencies = [
+    "jupyterlab>=4",
+    "ipython",
+]
+requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/franklin_magic"
+Homepage = "https://github.com/yourusername/franklin_container"
 
 [tool.setuptools.packages.find]
-where = ["src/franklin_magic"]
+where = ["src/franklin_container"]
 
 [project.entry-points."ipython_magic"]
-franklin_magic = "franklin_magic.magic:load_ipython_extension"
+franklin_add = "franklin_container.magic:load_ipython_extension"
