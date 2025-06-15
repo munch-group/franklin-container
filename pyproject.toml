@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "franklin_container"
-version = "0.1.2"
+version = "0.1.3"
 description = "A custom Jupyter magic for installing Pixi packages"
 readme = "README.md"
 license = "MIT"
@@ -22,7 +22,7 @@ requires-python = ">=3.9"
 Homepage = "https://github.com/yourusername/franklin_container"
 
 [tool.setuptools.packages.find]
-where = ["src/franklin_container"]
+where = ["src"]
 
 [project.entry-points."ipython_magic"]
 franklin = "franklin_container.magic:load_ipython_extension"
