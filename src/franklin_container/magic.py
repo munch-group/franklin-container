@@ -40,12 +40,18 @@ def load_ipython_extension(ipython):
     """This function is called when `%load_ext franklin_container.magic` is run in IPython."""
     @register_line_magic
     def franklin(line):
+
+        if not os.path.exists('Dockerfile'):
+            # do nothing if unless in a cloned exercise repo
+            return
+
         packages = line.strip().split()
         if not packages:
             print("Usage: %franklin <package-name> <package-name> ...")
             return
         
-        if not shutil.which("pixi"):
+        pixi_exe = os.environ['PIXI_EXE']
+        if not os.path.exists(pixi_exe):
             print("Installing pixi")
             script_file = tempfile.NamedTemporaryFile(mode='w')
             script_file.write(install_pixi_script)
@@ -55,7 +61,6 @@ def load_ipython_extension(ipython):
                 print(f"Error installing {', '.join(packages)}':\n{result.stderr}")
 
         print(f"Installing: {', '.join(packages)}")
-        pixi_exe = os.environ['PIXI_EXE']
         cmd = [pixi_exe, "add", "--feature", "exercise", "--platform", "linux-64"] + packages
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
 #        print(f"Packages {', '.join(packages)} installed successfully.")
