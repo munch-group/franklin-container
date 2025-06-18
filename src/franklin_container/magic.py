@@ -55,7 +55,8 @@ def load_ipython_extension(ipython):
                 print(f"Error installing {', '.join(packages)}':\n{result.stderr}")
 
         print(f"Installing: {', '.join(packages)}")
-        cmd = ["pixi", "add", "--feature", "exercise", "--platform", "linux-64"] + packages
+        pixi_exe = os.environ['PIXI_EXE']
+        cmd = [pixi_exe, "add", "--feature", "exercise", "--platform", "linux-64"] + packages
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
 #        print(f"Packages {', '.join(packages)} installed successfully.")
         # else:
