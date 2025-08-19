@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "franklin_container"
-version = "0.1.5"
+version = "0.1.6"
 classifiers = [
-  "Development Status :: 5 - Beta",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Education",
   "Topic :: Software Development :: Build Tools",
   "Programming Language :: Python :: 3",
